@@ -11,9 +11,9 @@ class MoviesController extends AbstractController
     #[Route('/movies', name: 'movies')]
     public function index(): Response
     {
-        // Truyền dữ liệu sang template
-        return $this->render('index.html.twig', [
-            "title" => "Avenger: End Game"
-        ]);
+        $movies = ["Pham Trung", "Jack goat", "123"];
+
+        // Pass the data as 'movies' to match the template variable
+        return $this->render('index.html.twig', ['movies' => $movies]);
     }
 }

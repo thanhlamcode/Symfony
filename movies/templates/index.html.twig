@@ -1,3 +1,11 @@
-<h1>
-	{{ dump(title) }}
-</h1>
+{% block title %}
+	{{author}}
+{% endblock %}
+
+{% block body %}
+	<ul>
+		{% for movie in movies %}
+			<li>{{ movie }}</li>
+		{% endfor %}
+	</ul>
+{% endblock %}
